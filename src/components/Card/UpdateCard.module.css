@@ -1,0 +1,56 @@
+.container {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #7f7fd5; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #91eae4,
+    #86a8e7,
+    #7f7fd5
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #91eae4,
+    #86a8e7,
+    #7f7fd5
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+}
+
+/* hoover para la opcion de delete */
+.container:hover {
+  color: white;
+  background: #c31432; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #240b36,
+    #c31432
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #240b36,
+    #c31432
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.container label {
+  width: 100%;
+}
+
+.container label input {
+  height: 30px;
+  width: 100%;
+  cursor: text;
+  padding: 0 8px;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  border: none;
+  outline-color: #1e73be;
+}

@@ -1,0 +1,32 @@
+.container {
+  color: black;
+  padding: 0.7rem;
+  margin-bottom: 0.7rem;
+  height: auto;
+}
+
+.container label input {
+  background-color: rgba(186, 186, 186, 0.385);
+  padding: 0.5rem;
+  color: black;
+  height: 30px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.container input:hover {
+  transform: scale(1.1);
+  transition: transform 500ms;
+}
+
+/* .container input:valid {
+  outline-style: solid;
+  outline-color: green;
+} */
+
+.container input:invalid {
+  outline-style: solid;
+  outline-color: rgb(149, 41, 41);
+}

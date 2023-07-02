@@ -1,0 +1,24 @@
+hr {
+  margin: 1rem 0;
+}
+
+h1 {
+  color: #1e73be;
+  text-align: center;
+}
+
+.card {
+  width: 300px;
+  height: auto;
+  padding: 1rem;
+  margin: 2rem auto 0 auto;
+  border-top: solid 3px #1e73be;
+  font-size: 0.7rem;
+  text-align: center;
+  box-shadow: 0 2px 1px rgb(0, 0, 0, 0.39);
+  transition: transform 500ms;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}

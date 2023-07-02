@@ -1,0 +1,21 @@
+.separator {
+  height: 1px;
+  width: 100%;
+  margin: 2rem 0;
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.separator::before {
+  content: 'TypeScript';
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  color: #202090;
+  font-style: italic;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  box-shadow: 1px 1px 10px #202090;
+}
