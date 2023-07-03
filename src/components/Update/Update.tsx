@@ -3,7 +3,7 @@ import { Response } from '../../types'
 import { UpdateCard } from '../Card/UpdateCard'
 import styles from './Update.module.css'
 
-export function Update(): JSX.Element {
+function Update(): JSX.Element {
   const results = useLoaderData() as Response
   const { data } = results
 
@@ -29,3 +29,5 @@ export function Update(): JSX.Element {
     </>
   )
 }
+
+export default Update

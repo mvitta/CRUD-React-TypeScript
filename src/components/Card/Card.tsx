@@ -1,7 +1,7 @@
 import { useRecords } from '../../hooks/useRecords'
 import styles from './Card.module.css'
 
-export function Card(): JSX.Element {
+function Card(): JSX.Element {
   const results = useRecords()
   // arreglar el desbordamiento de main, a medida que agregamos mas registro se deborda por debeajo del footer
   return (
@@ -23,3 +23,5 @@ export function Card(): JSX.Element {
     </div>
   )
 }
+
+export default Card

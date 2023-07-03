@@ -4,16 +4,16 @@ import App from './App.tsx'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { ErrorPage } from './components/Error/ErrorPage.tsx'
-import { Card } from './components/Card/Card.tsx'
-import { Form } from './components/Form/Form.tsx'
-import { Update } from './components/Update/Update.tsx'
 import { getRecords } from './services/GetRecords.ts'
-
 // los datos estaran desde el primer render de la aplicacion
 async function rootLoader() {
   const users = await getRecords('http://localhost:3000')
   return users
 }
+
+const Form = React.lazy(() => import('./components/Form/Form.tsx'))
+const Card = React.lazy(() => import('./components/Card/Card.tsx'))
+const Update = React.lazy(() => import('./components/Update/Update.tsx'))
 
 const router = createBrowserRouter([
   {
