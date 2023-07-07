@@ -14,6 +14,12 @@ hr {
   transition: transform 500ms;
 }
 
+@media (max-width: 320px) {
+  .card {
+    width: 100%;
+  }
+}
+
 .card div {
   padding: 0.5rem;
 }
