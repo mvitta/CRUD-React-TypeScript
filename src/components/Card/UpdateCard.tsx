@@ -3,7 +3,7 @@ import styles from './UpdateCard.module.css'
 import { User } from '../../types'
 import { Button } from '../Button/Button'
 
-export function UpdateCard(user: User): JSX.Element {
+function UpdateCard(user: User): JSX.Element {
   const [value, setValue] = useState<User>(user)
   const inputID = useId()
 
@@ -13,7 +13,7 @@ export function UpdateCard(user: User): JSX.Element {
   return (
     <div className={styles.container}>
       <label htmlFor={`${inputID}nombre`}>
-        <strong>Nombre</strong>
+        <strong>NOMBRE</strong>
         <input
           type='text'
           value={value.nombre}
@@ -24,7 +24,7 @@ export function UpdateCard(user: User): JSX.Element {
         />
       </label>
       <label htmlFor={`${inputID}apellido`}>
-        <strong>Apellido</strong>
+        <strong>APELLIDO</strong>
         <input
           type='text'
           value={value.apellido}
@@ -35,7 +35,7 @@ export function UpdateCard(user: User): JSX.Element {
         />
       </label>
       <label htmlFor={`${inputID}email`}>
-        <strong>E-mail</strong>
+        <strong>CORREO ELECTRONICO</strong>
         <input
           type='email'
           value={value.email}
@@ -46,7 +46,7 @@ export function UpdateCard(user: User): JSX.Element {
         />
       </label>
       <label htmlFor={`${inputID}date`}>
-        <strong> Fecha de Nacimiento</strong>
+        <strong> FECHA DE NACIMIENTO</strong>
         <input
           type='date'
           value={value.date}
@@ -56,9 +56,12 @@ export function UpdateCard(user: User): JSX.Element {
           autoComplete='off'
         />
       </label>
-      <div>
+      <div className={styles.containerButton}>
         <Button type='submit' tag='Actualizar' />
+        <Button type='submit' tag='Eliminar' />
       </div>
     </div>
   )
 }
+
+export default UpdateCard

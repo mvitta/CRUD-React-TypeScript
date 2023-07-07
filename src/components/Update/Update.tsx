@@ -1,30 +1,31 @@
 import { useLoaderData } from 'react-router-dom'
 import { Response } from '../../types'
-import { UpdateCard } from '../Card/UpdateCard'
 import styles from './Update.module.css'
+import { lazy, Suspense } from 'react'
+import LoadingUsers from '../Loaders/LoadingUsers'
+import { Title } from '../Title/Title'
 
 function Update(): JSX.Element {
   const results = useLoaderData() as Response
+  const UpdateCard = lazy(() => import('../Card/UpdateCard'))
   const { data } = results
-
-  console.log(styles)
-
   return (
     <>
-      <h1>Actualizar Datos</h1>
+      <Title title='Actualizar Datos' />
       <div className={`${styles.containerUpdate}`}>
-        {/* agregar el formulario para revisar como enviar los datos */}
-        {data.map(({ nombre, apellido, email, date }) => {
-          return (
-            <UpdateCard
-              apellido={apellido}
-              nombre={nombre}
-              email={email}
-              date={date}
-              key={crypto.randomUUID()}
-            />
-          )
-        })}
+        <Suspense fallback={<LoadingUsers />}>
+          {data.map(({ nombre, apellido, email, date }) => {
+            return (
+              <UpdateCard
+                apellido={apellido}
+                nombre={nombre}
+                email={email}
+                date={date}
+                key={crypto.randomUUID()}
+              />
+            )
+          })}
+        </Suspense>
       </div>
     </>
   )

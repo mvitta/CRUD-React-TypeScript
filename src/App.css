@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Arial', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: 100;
 }
 
@@ -16,6 +16,7 @@ body {
 main {
   min-height: 85vh;
   height: auto;
+  padding: 3rem;
 }
 
 main .section-buttons {
@@ -24,7 +25,7 @@ main .section-buttons {
 }
 
 .form {
-  width: 320px;
+  width: 100%;
   margin: 0 auto;
 }
 

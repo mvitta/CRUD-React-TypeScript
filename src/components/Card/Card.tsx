@@ -1,4 +1,5 @@
 import { useRecords } from '../../hooks/useRecords'
+import { Title } from '../Title/Title'
 import styles from './Card.module.css'
 
 function Card(): JSX.Element {
@@ -6,16 +7,29 @@ function Card(): JSX.Element {
   // arreglar el desbordamiento de main, a medida que agregamos mas registro se deborda por debeajo del footer
   return (
     <div>
-      <h1>Usuarios Registrados</h1>
-      {results.map(({ nombre, apellido, email, date }) => {
+      <Title title='Usuarios Registrados' />
+      {results.map(({ nombre, apellido, email, date }, index) => {
         return (
           <div className={styles.card} key={crypto.randomUUID()}>
+            <div>
+              <span>{`Usuario `}</span>
+              {index}
+            </div>
             <hr />
-            <h1>
-              Nombre: {nombre} {apellido}
-            </h1>
-            <h2>E-mail: {email}</h2>
-            <h3>Fecha de nacimiento: {date}</h3>
+            <div>
+              NOMBRE
+              <h2>
+                {nombre} {apellido}
+              </h2>
+            </div>
+            <div>
+              CORREO ELECTRONICO
+              <p>{email}</p>
+            </div>
+            <div>
+              FECHA DE NACIMIENTO
+              <p>{date}</p>
+            </div>
             <hr />
           </div>
         )

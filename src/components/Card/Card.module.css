@@ -2,21 +2,25 @@ hr {
   margin: 1rem 0;
 }
 
-h1 {
-  color: #1e73be;
-  text-align: center;
-}
-
 .card {
   width: 300px;
   height: auto;
   padding: 1rem;
   margin: 2rem auto 0 auto;
-  border-top: solid 3px #1e73be;
-  font-size: 0.7rem;
+  border-top: solid 3px #0052d4;
+  border-radius: 5px;
   text-align: center;
-  box-shadow: 0 2px 1px rgb(0, 0, 0, 0.39);
+  box-shadow: 0 2px 10px rgb(0, 0, 0, 0.39);
   transition: transform 500ms;
+}
+
+.card div {
+  padding: 0.5rem;
+}
+
+.card div span {
+  color: #0052d4;
+  font-weight: bold;
 }
 
 .card:hover {

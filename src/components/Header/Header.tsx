@@ -31,10 +31,7 @@ export function Header(): JSX.Element {
             <Link to={`Show/`}>Mostrar</Link>
           </li>
           <li>
-            <Link to={`Update/`}>Actualizar</Link>
-          </li>
-          <li>
-            <Link to={`/`}>Borrar</Link>
+            <Link to={`Update/`}>Actualizar y Borrar</Link>
           </li>
         </ul>
       </section>

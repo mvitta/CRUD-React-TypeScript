@@ -9,7 +9,7 @@ import { sendRecord } from '../../services/sendRecord'
 //probar agregando evento click como el de la explciacion de desarroollo util:
 //postdata: ver los 3 videos otra vez de render, useEffect, limpiar efectos
 
-function Form(): JSX.Element {
+export default function Form(): JSX.Element {
   useEffect(() => {
     function handlerSubmit(e: SubmitEvent) {
       const formData = new FormData(form)
@@ -50,5 +50,3 @@ function Form(): JSX.Element {
     </>
   )
 }
-
-export default Form
