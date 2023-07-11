@@ -1,41 +1,42 @@
 .container {
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100%;
   box-shadow: 0 2px 10px rgb(0, 0, 0, 0.39);
   border-radius: 10px;
   border-top: 3px solid #0052d4;
   border-bottom: 1px solid #0052d4;
+  padding: 1rem;
+}
+
+.container table {
+  margin-bottom: 1rem;
   width: 100%;
-  height: auto;
-  transition: transform 500ms;
+  border-bottom: 1px solid #6a6a6a;
+  padding-bottom: 10px;
 }
 
 /* hoover para la opcion de delete */
 .container:hover {
-  transform: scale(1.1);
-}
-
-.container label {
-  width: 100%;
-}
-
-.container label input {
-  height: 30px;
-  width: 100%;
-  cursor: text;
-  padding: 0 8px;
-  margin-top: 6px;
-  margin-bottom: 10px;
-  letter-spacing: 2px;
-  font-weight: 500;
-  border: none;
-  outline-color: #1e73be;
+  transform: scale(1.03);
+  transition: transform 500ms;
 }
 
 .container .containerButton {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
+}
+
+.container tbody tr {
+  width: auto;
+}
+
+.container tbody tr td strong {
+  color: #000000;
+  font-weight: 600;
+}
+
+.container table tbody tr td {
+  color: #6a6a6a;
+  word-wrap: break-word;
 }
