@@ -43,7 +43,7 @@ export default function Form(): JSX.Element {
           )
         })}
         <div className='section-buttons'>
-          <Button tag='Registrar' type='submit' />
+          <Button tag='Registrar' type='submit' color='#0052d4' />
         </div>
       </form>
       {/* <div className={styles.separator}></div> */}

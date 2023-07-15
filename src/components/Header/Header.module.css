@@ -5,6 +5,11 @@ a {
 
 li {
   list-style: none;
+  width: auto;
+}
+
+nav {
+  box-shadow: 2px 0 10px #0052d4;
 }
 
 .container {
@@ -29,14 +34,35 @@ li {
   padding: 0 1rem;
 }
 
+.container .containerLeft span {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.container .containerLeft span:nth-child(1) {
+  color: blue;
+}
+
+.container .containerLeft span:nth-child(2) {
+  color: red;
+}
+
+.container .containerLeft span:nth-child(3) {
+  color: yellow;
+}
+
+.container .containerLeft span:nth-child(4) {
+  color: green;
+}
+
 .container .containerLeft li a {
-  color: black;
-  font-weight: 600;
+  color: #0052d4;
+  font-weight: 500;
+  margin: 1rem;
 }
 
 .container .containerLeft li:hover {
-  background-color: #0052d4;
-  color: white;
+  color: red;
 }
 
 .container .containerRight {

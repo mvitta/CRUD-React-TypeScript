@@ -14,6 +14,7 @@
   border: none;
   border-radius: 5px;
   margin-top: 10px;
+  outline-color: #0052d4;
 }
 
 .container input:hover {

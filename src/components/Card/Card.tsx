@@ -8,7 +8,7 @@ function Card(): JSX.Element {
   return (
     <div>
       <Title title='Usuarios Registrados' />
-      {results.map(({ nombre, apellido, email, date }, index) => {
+      {results.map(({ nombre, apellido, email, date, id }, index) => {
         return (
           <div className={styles.card} key={crypto.randomUUID()}>
             <div>
@@ -16,6 +16,10 @@ function Card(): JSX.Element {
               {index}
             </div>
             <hr />
+            <div>
+              ID
+              <div>{id}</div>
+            </div>
             <div>
               NOMBRE
               <h2>

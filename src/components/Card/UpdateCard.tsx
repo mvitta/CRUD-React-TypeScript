@@ -2,15 +2,22 @@ import { useState } from 'react'
 import styles from './UpdateCard.module.css'
 import { User } from '../../types'
 import { Button } from '../Button/Button'
+import { LinkButton } from '../Button/LinkButton'
 
 function UpdateCard(user: User): JSX.Element {
   const [value] = useState<User>(user)
 
   return (
     <>
-      <section className={styles.container}>
+      <form className={styles.container}>
         <table>
           <tbody>
+            <tr>
+              <td>
+                <strong>ID</strong>
+              </td>
+              <td>{value.id}</td>
+            </tr>
             <tr>
               <td>
                 <strong>Nombre</strong>
@@ -38,10 +45,10 @@ function UpdateCard(user: User): JSX.Element {
           </tbody>
         </table>
         <div className={styles.containerButton}>
-          <Button type='submit' tag='Editar' />
-          <Button type='submit' tag='Borrar' />
+          <LinkButton id={value.id} tag='Editar' color='#1f7922' />
+          <LinkButton id={value.id} tag='Borrar' color='#a52a2a' />
         </div>
-      </section>
+      </form>
     </>
   )
 }

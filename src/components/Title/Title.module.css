@@ -3,4 +3,6 @@
   color: #0052d4;
   padding: 1rem 0;
   text-align: center;
+  text-shadow: 1px 1px 2px black, 0 0 1rem #0052d4;
+  font-size: 40px;
 }

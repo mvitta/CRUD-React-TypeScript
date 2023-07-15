@@ -8,8 +8,11 @@ export function Input({
   type,
   regex,
   placeholder,
+  theValue,
 }: FormProps): JSX.Element {
-  const [value, setValue] = useState('')
+  const [value, setValue] = useState(theValue)
+
+  console.log(value)
 
   return (
     <div className={styles.container}>

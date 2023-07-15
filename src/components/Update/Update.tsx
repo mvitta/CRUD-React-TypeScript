@@ -14,9 +14,10 @@ function Update(): JSX.Element {
       <Title title='Actualizar Datos' />
       <div className={`${styles.containerUpdate}`}>
         <Suspense fallback={<LoadingUsers />}>
-          {data.map(({ nombre, apellido, email, date }) => {
+          {data.map(({ nombre, apellido, email, date, id }) => {
             return (
               <UpdateCard
+                id={id}
                 apellido={apellido}
                 nombre={nombre}
                 email={email}
