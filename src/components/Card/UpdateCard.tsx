@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import styles from './UpdateCard.module.css'
 import { User } from '../../types'
-import { Button } from '../Button/Button'
 import { LinkButton } from '../Button/LinkButton'
 
 function UpdateCard(user: User): JSX.Element {

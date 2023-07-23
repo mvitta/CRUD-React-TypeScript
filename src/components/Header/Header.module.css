@@ -32,6 +32,11 @@ nav {
   justify-content: center;
   align-items: center;
   padding: 0 1rem;
+  border: 1px solid #0052d4;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: rgba(164, 164, 164, 0.128);
+  margin-left: 1rem;
 }
 
 .container .containerLeft span {
@@ -71,6 +76,7 @@ nav {
   justify-content: center;
   align-items: center;
   padding: 0 1rem;
+  margin-left: 1rem;
   gap: 15px;
 }
 

@@ -12,7 +12,7 @@ function Card(): JSX.Element {
         return (
           <div className={styles.card} key={crypto.randomUUID()}>
             <div>
-              <span>{`Usuario `}</span>
+              <span>Usuario </span>
               {index}
             </div>
             <hr />

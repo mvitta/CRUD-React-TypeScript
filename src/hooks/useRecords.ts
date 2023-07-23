@@ -12,6 +12,7 @@ export function useRecords(): User[] {
       try {
         const response = await fetch(baseURL)
         const information: Response = await response.json()
+
         const { data } = information
         setRecords(data)
       } catch (error) {

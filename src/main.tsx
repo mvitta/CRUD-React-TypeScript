@@ -36,7 +36,7 @@ const router = createBrowserRouter([
         loader: rootLoader,
       },
       {
-        path: 'Update/:id',
+        path: 'Update/:id(d+)',
         element: <Perfil />,
       },
     ],

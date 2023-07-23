@@ -10,14 +10,18 @@ export function ErrorPage(): JSX.Element {
   } = useRouteError() as ErrorResponse
 
   return (
-    <div className={styles.errorPage}>
-      <h1>Oops!</h1>
-      <p>Sorry, an unexpected error has occurred.</p>
-      <div>{status}</div>
-      <p>
-        <i>{statusText}</i>
-        <i>{message}</i>
-      </p>
-    </div>
+    <>
+      <h1 className={styles.titleError}>
+        {statusText} {status}
+      </h1>
+      <hr />
+      <div className={styles.errorPage}>
+        <h2>Oops!</h2>
+        <p>Sorry, an unexpected error has occurred.</p>
+        <p>
+          <i>{message}</i>
+        </p>
+      </div>
+    </>
   )
 }

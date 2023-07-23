@@ -30,6 +30,8 @@ export class FetchServices {
 
   async fetchOne(id: string, method?: string): Promise<ResponseOneUser> {
     const information = await this.fetchMain(method, id)
+    console.log(information)
+
     if (!information) {
       return {
         theID: 0,
@@ -41,5 +43,12 @@ export class FetchServices {
       }
     }
     return information
+  }
+
+  async fetchOneDelete(id: string, method?: string): Promise<void> {
+    const response = await fetch(`${this.BASEURL}/delete/${id}`, {
+      method: method,
+    })
+    return response.json()
   }
 }

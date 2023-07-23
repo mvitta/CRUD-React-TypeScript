@@ -1,5 +1,5 @@
 // import { Input } from '../Input/Input'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
 import { FetchServices } from '../../services/fetchServices'
 import { useState } from 'react'
@@ -7,10 +7,11 @@ import { ResponseOneUser } from './../../types'
 import { attributesForm } from './../../utils/attributesForm'
 import styles from './Perfil.module.css'
 import { Title } from '../Title/Title'
-import { Button } from '../Button/Button'
 
 export default function Perfil() {
   const { id } = useParams()
+  const navigate = useNavigate()
+
   const [user, setUser] = useState<ResponseOneUser>({
     apellido: '',
     date: '',
@@ -23,6 +24,12 @@ export default function Perfil() {
     setUser({ ...user, [e.target.name]: e.target.value })
   }
 
+  function handlerSubmit(e: React.FormEvent<HTMLFormElement>) {
+    alert('Actualizado') // -> hacer un modal simpatico
+    navigate('/Update')
+    e.preventDefault()
+  }
+
   useEffect(() => {
     if (id) {
       new FetchServices().fetchOne(id, 'POST').then((res) => {
@@ -31,14 +38,10 @@ export default function Perfil() {
     }
   }, [id])
 
-  // useEffect(() => {
-  //   console.log(user)
-  // }, [user])
-
   return (
     <>
       <Title title='Editar Perfil' />
-      <form className={styles.container}>
+      <form className={styles.container} onSubmit={handlerSubmit}>
         <label htmlFor='id'>
           <span>{id}</span>
         </label>
@@ -97,7 +100,9 @@ export default function Perfil() {
         </label>
         <hr />
         <div>
-          <Button color='#008000' tag='Actualizar' type='submit' />
+          <button type='submit' className={styles.button}>
+            Actualizar
+          </button>
         </div>
       </form>
     </>

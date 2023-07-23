@@ -29,7 +29,7 @@ export interface FormProps {
   type: string
   id: string
   tag: string
-  regex: string
+  regex?: string
   placeholder?: string
   theValue?: string
 }

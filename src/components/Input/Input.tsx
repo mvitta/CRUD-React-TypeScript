@@ -8,11 +8,9 @@ export function Input({
   type,
   regex,
   placeholder,
-  theValue,
+  theValue = '',
 }: FormProps): JSX.Element {
   const [value, setValue] = useState(theValue)
-
-  console.log(value)
 
   return (
     <div className={styles.container}>
@@ -29,6 +27,7 @@ export function Input({
           pattern={regex}
           placeholder={placeholder}
           {...(type === 'email' && { autoComplete: 'email' })}
+          required
         />
       </label>
     </div>

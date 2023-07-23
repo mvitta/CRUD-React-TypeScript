@@ -19,7 +19,6 @@ export const attributesForm: FormProps[] = [
     type: 'email',
     id: 'email',
     tag: 'Correo Electronico',
-    regex: '^w+([.-_+]?w+)*@w+([.-]?w+)*(.w{2,10})+$',
     placeholder: 'Ingresa tu email',
   },
   {
@@ -33,7 +32,6 @@ export const attributesForm: FormProps[] = [
     type: 'date',
     id: 'date',
     tag: 'Fecha de nacimiento',
-    regex: '',
     placeholder: 'Seleccionar Fecha',
   },
 ]
