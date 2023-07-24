@@ -50,14 +50,26 @@ export class SinglyLinkedList {
   }
 
   // validar, puede crashear
+  //
   find(id) {
     let currentNode = this.head
-    while (currentNode) {
-      if (currentNode.value.id === id) {
-        return currentNode
+    if (currentNode !== null) {
+      while (currentNode) {
+        if (currentNode.value.id === id) {
+          return currentNode
+        }
+        currentNode = currentNode.next
       }
-      currentNode = currentNode.next
     }
+  }
+
+  updateByID({ id, nombre, apellido, email, password, date }) {
+    const nodeToUpdate = this.find(id)
+    nodeToUpdate.value.nombre = nombre
+    nodeToUpdate.value.apellido = apellido
+    nodeToUpdate.value.email = email
+    nodeToUpdate.value.password = password
+    nodeToUpdate.value.date = date
   }
 
   deleteByID(id) {

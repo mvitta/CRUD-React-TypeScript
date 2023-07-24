@@ -30,7 +30,6 @@ export class FetchServices {
 
   async fetchOne(id: string, method?: string): Promise<ResponseOneUser> {
     const information = await this.fetchMain(method, id)
-    console.log(information)
 
     if (!information) {
       return {
@@ -50,5 +49,15 @@ export class FetchServices {
       method: method,
     })
     return response.json()
+  }
+
+  async fetchUpdate(id: string, user: ResponseOneUser) {
+    await fetch(`${this.BASEURL}/update/${id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(user),
+    })
   }
 }

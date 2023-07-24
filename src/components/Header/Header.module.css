@@ -45,19 +45,19 @@ nav {
 }
 
 .container .containerLeft span:nth-child(1) {
-  color: blue;
+  color: rgb(0, 0, 136);
 }
 
 .container .containerLeft span:nth-child(2) {
-  color: red;
+  color: rgb(166, 0, 0);
 }
 
 .container .containerLeft span:nth-child(3) {
-  color: yellow;
+  color: rgb(185, 185, 0);
 }
 
 .container .containerLeft span:nth-child(4) {
-  color: green;
+  color: rgb(0, 118, 0);
 }
 
 .container .containerLeft li a {
