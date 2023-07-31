@@ -10,6 +10,7 @@ li {
 
 nav {
   box-shadow: 2px 0 10px #0052d4;
+  border-top: 10px solid #0052d4;
 }
 
 .container {
@@ -35,29 +36,15 @@ nav {
   border: 1px solid #0052d4;
   border-top-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  background-color: rgba(164, 164, 164, 0.128);
+
+  background-color: #0052d4;
   margin-left: 1rem;
 }
 
 .container .containerLeft span {
   font-size: 2rem;
   font-weight: bold;
-}
-
-.container .containerLeft span:nth-child(1) {
-  color: rgb(0, 0, 136);
-}
-
-.container .containerLeft span:nth-child(2) {
-  color: rgb(166, 0, 0);
-}
-
-.container .containerLeft span:nth-child(3) {
-  color: rgb(185, 185, 0);
-}
-
-.container .containerLeft span:nth-child(4) {
-  color: rgb(0, 118, 0);
+  color: #ffffff;
 }
 
 .container .containerLeft li a {
@@ -84,19 +71,6 @@ nav {
   padding: 1rem 0;
   border: none;
   background: #0052d4; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #6fb1fc,
-    #4364f7,
-    #0052d4
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #6fb1fc,
-    #4364f7,
-    #0052d4
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
   height: auto;
 }
 

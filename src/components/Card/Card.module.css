@@ -14,6 +14,12 @@ hr {
   transition: transform 500ms;
 }
 
+.card p,
+h1 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
 @media (max-width: 320px) {
   .card {
     width: 100%;

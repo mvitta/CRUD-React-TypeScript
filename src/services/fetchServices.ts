@@ -1,4 +1,5 @@
 import { Response, ResponseOneUser } from '../types'
+import cryptoJS from 'crypto-js'
 // este metodo se utiliza en main.tsx para cargar los registros en el loader de react router
 
 export class FetchServices {
@@ -52,12 +53,17 @@ export class FetchServices {
   }
 
   async fetchUpdate(id: string, user: ResponseOneUser) {
+    const cipherText = cryptoJS.AES.encrypt(
+      JSON.stringify(user),
+      'clavesecreta'
+    ).toString()
+
     await fetch(`${this.BASEURL}/update/${id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(user),
+      body: JSON.stringify({ user: cipherText }),
     })
   }
 }

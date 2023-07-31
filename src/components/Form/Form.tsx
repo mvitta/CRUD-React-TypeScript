@@ -16,6 +16,8 @@ export default function Form(): JSX.Element {
       const data = Object.fromEntries(formData)
       if (!isEmpty(data)) {
         sendRecord(data)
+      } else {
+        alert('no puedes enviar campos vacios')
       }
       e.preventDefault()
     }

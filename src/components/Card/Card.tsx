@@ -18,13 +18,13 @@ function Card(): JSX.Element {
             <hr />
             <div>
               ID
-              <div>{id}</div>
+              <p>{id}</p>
             </div>
             <div>
               NOMBRE
-              <h2>
+              <p>
                 {nombre} {apellido}
-              </h2>
+              </p>
             </div>
             <div>
               CORREO ELECTRONICO

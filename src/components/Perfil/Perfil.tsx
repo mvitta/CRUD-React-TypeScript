@@ -1,5 +1,5 @@
 // import { Input } from '../Input/Input'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { useEffect } from 'react'
 import { FetchServices } from '../../services/fetchServices'
 import { useState } from 'react'
@@ -10,7 +10,6 @@ import { Title } from '../Title/Title'
 
 export default function Perfil() {
   const { id } = useParams()
-  const navigate = useNavigate()
 
   const [user, setUser] = useState<ResponseOneUser>({
     apellido: '',
@@ -100,7 +99,7 @@ export default function Perfil() {
           />
         </label>
         <hr />
-        <div>
+        <div className={styles.containerButton}>
           <button type='submit' className={styles.button}>
             Actualizar
           </button>

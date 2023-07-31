@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import styles from './Input.module.css'
 import { FormProps } from '../../types'
 
@@ -21,13 +21,12 @@ export function Input({
           type={type}
           name={id}
           id={id}
+          pattern={regex}
           onChange={(e) => {
             setValue(e.target.value.toLowerCase())
           }}
-          pattern={regex}
           placeholder={placeholder}
           {...(type === 'email' && { autoComplete: 'email' })}
-          required
         />
       </label>
     </div>

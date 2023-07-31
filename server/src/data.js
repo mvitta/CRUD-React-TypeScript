@@ -5,6 +5,15 @@ let id = 10
 function generateID() {
   return String(id++)
 }
+export function validateBody(body) {
+  return (
+    Object.prototype.hasOwnProperty.call(body, 'nombre') &&
+    Object.prototype.hasOwnProperty.call(body, 'apellido') &&
+    Object.prototype.hasOwnProperty.call(body, 'email') &&
+    Object.prototype.hasOwnProperty.call(body, 'password') &&
+    Object.prototype.hasOwnProperty.call(body, 'date')
+  )
+}
 
 export class User {
   constructor({ nombre, apellido, email, password, date }) {

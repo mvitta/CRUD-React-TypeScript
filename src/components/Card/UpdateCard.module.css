@@ -12,6 +12,11 @@
   width: 100%;
   border-bottom: 1px solid #6a6a6a;
   padding-bottom: 10px;
+  text-overflow: ellipsis;
+}
+
+.container table tbody tr td {
+  /* updatecard se desborda con nombres, correos o palabras largas */
 }
 
 /* hoover para la opcion de delete */
