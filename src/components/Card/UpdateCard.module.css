@@ -16,7 +16,10 @@
 }
 
 .container table tbody tr td {
-  /* updatecard se desborda con nombres, correos o palabras largas */
+  max-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /* hoover para la opcion de delete */

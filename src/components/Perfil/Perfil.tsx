@@ -24,8 +24,10 @@ export default function Perfil() {
   }
 
   function handlerSubmit(e: React.FormEvent<HTMLFormElement>) {
-    new FetchServices().fetchUpdate(id, user)
-    alert('Actualizado') // -> hacer un modal simpatico
+    if (id) {
+      new FetchServices().fetchUpdate(id, user)
+      alert('Actualizado') // -> hacer un modal simpatico
+    }
 
     e.preventDefault()
   }

@@ -28,10 +28,10 @@ export class User {
 
 export const data = new SinglyLinkedList(
   new User({
-    nombre: 'Jean',
-    apellido: 'Vitta',
-    email: 'Jean@gmail.com',
-    password: '123456',
+    nombre: 'Jeanaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+    apellido: 'Vittaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+    email: 'Jeanaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@gmail.com',
+    password: '123456aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
     date: '2023-06-23',
   })
 )
